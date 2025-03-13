@@ -121,7 +121,7 @@ WHERE licensed = 'true';
 ```
 ![image](https://github.com/user-attachments/assets/d9d17235-7a42-454a-a8bb-31eb39320cd5)
 
-4. For each album, calculate the total views of all associated tracks.
+4. Find all tracks that belong to the album type single.
 
 Query:
 ```sql
