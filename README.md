@@ -275,7 +275,7 @@ ORDER BY 2 DESC;
 
 ![image](https://github.com/user-attachments/assets/6ffcf2f9-c322-4d44-b1fe-59c03eb97cdc)
 
-5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
+4. Find tracks where the energy-to-liveness ratio is greater than 1.2.
 
 Query:
 ```sql
@@ -290,7 +290,7 @@ ORDER BY 3 DESC;
 ```
 ![image](https://github.com/user-attachments/assets/98677d3b-66a0-4b1c-a081-4ef519f608bb)
 
-7. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
+5. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
 
 Query:
 ```sql
