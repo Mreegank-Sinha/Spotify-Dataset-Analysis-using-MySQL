@@ -97,3 +97,13 @@ WHERE stream > 1000000000;
 ```
 ![image](https://github.com/user-attachments/assets/9b18e037-dbc3-4747-9bfb-f4ed617e0af5)
 
+2. List all albums along with their respective artists.
+
+Query:
+```sql
+SELECT DISTINCT album,artist
+FROM spotify;
+
+```
+![image](https://github.com/user-attachments/assets/e9a29518-b25e-4350-8be0-e7546ad6b93b)
+
