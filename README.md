@@ -107,3 +107,12 @@ FROM spotify;
 ```
 ![image](https://github.com/user-attachments/assets/e9a29518-b25e-4350-8be0-e7546ad6b93b)
 
+3. Get the total number of comments for tracks where `licensed = TRUE`.
+
+Query:
+```sql
+SELECT SUM (comments) as total_comments
+FROM spotify
+WHERE licensed = 'true'
+```
+![image](https://github.com/user-attachments/assets/d9d17235-7a42-454a-a8bb-31eb39320cd5)
