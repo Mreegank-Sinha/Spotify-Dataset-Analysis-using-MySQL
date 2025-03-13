@@ -274,3 +274,33 @@ ORDER BY 2 DESC;
 ```
 
 ![image](https://github.com/user-attachments/assets/6ffcf2f9-c322-4d44-b1fe-59c03eb97cdc)
+
+5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
+
+Query:
+```sql
+SELECT 
+    energy,
+    liveness,
+    (energy / liveness) AS energy_liveness_ratio
+FROM spotify
+WHERE (energy / liveness) > 1.2
+GROUP BY 1,2
+ORDER BY 3 DESC;
+```
+![image](https://github.com/user-attachments/assets/98677d3b-66a0-4b1c-a081-4ef519f608bb)
+
+7. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
+
+Query:
+```sql
+SELECT 
+    artist, 
+    track, 
+    views, 
+    likes, 
+    SUM(likes) OVER (ORDER BY views) AS cumulative_likes
+FROM spotify
+ORDER BY cumulative_likes DESC;
+```
+![image](https://github.com/user-attachments/assets/c1030661-3a8e-4413-95d8-4b6bfdcbe5da)
