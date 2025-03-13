@@ -1,4 +1,8 @@
 # Spotify-Dataset-Analysis-using-MySQL
+
+![image](https://github.com/user-attachments/assets/516fe2b8-2bc8-492e-8cd4-72d7d1b1e70b)
+
+
 ## Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
 
