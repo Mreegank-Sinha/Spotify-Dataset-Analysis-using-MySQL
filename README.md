@@ -244,7 +244,15 @@ WHERE rank <=3
 
 Query:
 ```sql
+SELECT
+	track,
+	artist,
+	liveness
+From spotify
+WHERE liveness > (SELECT AVG (liveness)FROM Spotify);
 ```
+![image](https://github.com/user-attachments/assets/e5352321-38b4-4c73-8f08-158e0eda0dc3)
+
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
 
 Query:
