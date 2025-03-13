@@ -86,3 +86,13 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 - **Query Execution Plan**: Using `EXPLAIN ANALYZE` to review and refine query performance.
   
 ---
+## Analysis Questions
+### Easy Level
+1. Retrieve the names of all tracks that have more than 1 billion streams.
+Query:
+```sql
+SELECT * FROM spotify
+WHERE stream > 1000000000;
+```
+![image](https://github.com/user-attachments/assets/9b18e037-dbc3-4747-9bfb-f4ed617e0af5)
+
