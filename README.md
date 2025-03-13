@@ -217,3 +217,36 @@ WHERE
 	streamed_on_youtube <>0;
 ```
 ![image](https://github.com/user-attachments/assets/518abbe8-c7d1-4593-a984-8e93c82a5a74)
+
+### Advanced Level
+
+1. Find the top 3 most-viewed tracks for each artist using window functions.
+
+Query:
+```sql
+WITH ranking_artist
+AS
+(SELECT
+	artist,
+	track,
+	SUM(views) as total_view,
+	DENSE_RANK()OVER(PARTITION BY artist ORDER BY SUM(views)DESC) as rank
+FROM spotify
+GROUP BY 1,2
+ORDER BY 1,3 DESC
+)
+SELECT * FROM ranking_artist
+WHERE rank <=3
+```
+![image](https://github.com/user-attachments/assets/42ba16b3-3b24-45b8-8578-7198ff7294aa)
+
+2. Write a query to find tracks where the liveness score is above the average.
+
+Query:
+```sql
+```
+3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
+
+Query:
+```sql
+```
