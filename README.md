@@ -41,7 +41,7 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - `Album`: The album to which the track belongs.
 - `Album_type`: The type of album (e.g., single or album).
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
-### EDA
+### 2. EDA
 After learning about dataset's fields it is neccessary to perform EDA.
 - Dataset is checked for duplicate enteries.
 - When no duplicates are found dataset is imported for analysis.
