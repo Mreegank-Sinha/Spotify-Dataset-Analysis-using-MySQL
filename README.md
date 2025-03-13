@@ -155,3 +155,64 @@ GROUP BY 1
 ORDER BY 2 DESC
 ```
 ![image](https://github.com/user-attachments/assets/315807a5-16b6-4946-b124-e9b959d8e7c0)
+
+2. Find the top 5 tracks with the highest energy values.
+
+Query:
+```sql
+SELECT
+	track,
+	MAX(energy)
+FROM spotify
+GROUP BY 1
+ORDER BY 2 DESC
+```
+![image](https://github.com/user-attachments/assets/5ea0fd25-ebbd-4572-bc9e-2ff5daa24b2f)
+
+3. List all tracks along with their views and likes where `official_video = TRUE`.
+
+Query:
+```sql
+SELECT 
+	track,
+	SUM(views) as total_views,
+	SUM(likes) as total_likes
+FROM Spotify
+WHERE official_video = 'true'
+GROUP BY 1
+ORDER BY 2 DESC
+```
+![image](https://github.com/user-attachments/assets/7d2d5f75-f977-43b6-a8b0-4b691d6229b2)
+
+4. For each album, calculate the total views of all associated tracks.
+
+Query:
+```sql
+SELECT
+	album,
+	track,
+	SUM(views)
+FROM spotify
+GROUP BY 1,2
+ORDER BY 3 DESC
+```
+![image](https://github.com/user-attachments/assets/4cd7062d-de6a-4904-93e8-60e9229b10e5)
+
+5. Retrieve the track names that have been streamed on Spotify more than YouTube.
+
+Query:
+```sql
+SELECT * FROM
+(SELECT
+	track,
+	COALESCE(SUM(CASE WHEN most_played_on='Youtube' THEN stream END),0)as streamed_on_youtube,
+	COALESCE(SUM(CASE WHEN most_played_on='Spotify' THEN stream END),0)as streamed_on_spotify
+FROM spotify
+GROUP BY 1
+) as t1
+WHERE
+	streamed_on_spotify > streamed_on_youtube
+	AND
+	streamed_on_youtube <>0;
+```
+![image](https://github.com/user-attachments/assets/518abbe8-c7d1-4593-a984-8e93c82a5a74)
