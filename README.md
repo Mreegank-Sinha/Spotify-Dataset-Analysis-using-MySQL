@@ -130,7 +130,7 @@ WHERE album_type = 'single';
 ```
 ![image](https://github.com/user-attachments/assets/9ff1bed5-68f7-44a5-8ffa-42e49d6bdd74)
 
-5. Retrieve the track names that have been streamed on Spotify more than YouTube.
+5. Count the total number of tracks by each artist.
 
 Query:
 ```sql
