@@ -301,6 +301,7 @@ SELECT
     likes, 
     SUM(likes) OVER (ORDER BY views) AS cumulative_likes
 FROM spotify
-ORDER BY cumulative_likes DESC;
+ORDER BY views DESC;
 ```
-![image](https://github.com/user-attachments/assets/c1030661-3a8e-4413-95d8-4b6bfdcbe5da)
+![image](https://github.com/user-attachments/assets/a3959993-ed0d-448c-9553-7a8d76e63333)
+
