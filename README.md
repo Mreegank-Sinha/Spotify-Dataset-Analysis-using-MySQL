@@ -89,6 +89,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 ## Analysis Questions
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
+
 Query:
 ```sql
 SELECT * FROM spotify
