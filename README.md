@@ -142,3 +142,16 @@ ORDER BY 2
 ![image](https://github.com/user-attachments/assets/046b1f57-07b8-4002-a448-99cf30dc14eb)
 
 ### Medium Level
+
+1. Find the top 3 most-viewed tracks for each artist using window functions.
+
+Query:
+```sql
+SELECT 
+	album, 
+	avg(danceability) as avg_danceability
+FROM spotify
+GROUP BY 1
+ORDER BY 2 DESC
+```
+![image](https://github.com/user-attachments/assets/315807a5-16b6-4946-b124-e9b959d8e7c0)
