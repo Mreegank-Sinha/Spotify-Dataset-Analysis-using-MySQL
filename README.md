@@ -257,4 +257,20 @@ WHERE liveness > (SELECT AVG (liveness)FROM Spotify);
 
 Query:
 ```sql
+WITH cte
+AS
+(SELECT
+	album,
+	MAX(energy) as highest_energy,
+	MIN(energy) as lowest_energy
+FROM spotify
+GROUP BY 1
+)
+SELECT
+	album,
+	highest_energy - lowest_energy as energy_diff
+FROM cte
+ORDER BY 2 DESC;
 ```
+
+![image](https://github.com/user-attachments/assets/6ffcf2f9-c322-4d44-b1fe-59c03eb97cdc)
