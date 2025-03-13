@@ -113,6 +113,16 @@ Query:
 ```sql
 SELECT SUM (comments) as total_comments
 FROM spotify
-WHERE licensed = 'true'
+WHERE licensed = 'true';
 ```
 ![image](https://github.com/user-attachments/assets/d9d17235-7a42-454a-a8bb-31eb39320cd5)
+
+4. For each album, calculate the total views of all associated tracks.
+
+Query:
+```sql
+SELECT * FROM spotify
+WHERE album_type = 'single';
+```
+![image](https://github.com/user-attachments/assets/9ff1bed5-68f7-44a5-8ffa-42e49d6bdd74)
+
