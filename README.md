@@ -47,3 +47,24 @@ After learning about dataset's fields it is neccessary to perform EDA.
 - When no duplicates are found dataset is imported for analysis.
 - Number of Columns of dataset, number of distinct albums, album types, and duration of tracks.
 - Min duration of track was found to be zero and the corresponding enteries were removed.
+
+```sql
+SELECT COUNT (*) FROM spotify;
+
+SELECT DISTINCT album_type FROM spotify;
+
+SELECT COUNT(DISTINCT artist) FROM spotify;
+
+SELECT MAX(duration_min) FROM spotify;
+
+SELECT MIN(duration_min) FROM spotify;
+
+SELECT * FROM spotify
+WHERE duration_min=0;
+
+DELETE  FROM spotify
+WHERE duration_min=0;
+
+SELECT * FROM spotify
+WHERE duration_min=0;
+```
