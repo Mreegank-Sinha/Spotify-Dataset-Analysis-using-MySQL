@@ -68,3 +68,21 @@ WHERE duration_min=0;
 SELECT * FROM spotify
 WHERE duration_min=0;
 ```
+### 4. Querying the Data
+After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
+
+#### Easy Queries
+- Simple data retrieval, filtering, and basic aggregations.
+  
+#### Medium Queries
+- More complex queries involving grouping, aggregation functions, and joins.
+  
+#### Advanced Queries
+- Nested subqueries, window functions, CTEs, and performance optimization.
+
+### 5. Query Optimization
+In advanced stages, the focus shifts to improving query performance. Some optimization strategies include:
+- **Indexing**: Adding indexes on frequently queried columns.
+- **Query Execution Plan**: Using `EXPLAIN ANALYZE` to review and refine query performance.
+  
+---
