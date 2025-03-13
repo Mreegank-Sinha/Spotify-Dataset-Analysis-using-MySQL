@@ -140,3 +140,5 @@ GROUP BY artist
 ORDER BY 2
 ```
 ![image](https://github.com/user-attachments/assets/046b1f57-07b8-4002-a448-99cf30dc14eb)
+
+### Medium Level
