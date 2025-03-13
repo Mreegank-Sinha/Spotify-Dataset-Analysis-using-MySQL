@@ -143,7 +143,7 @@ ORDER BY 2
 
 ### Medium Level
 
-1. Find the top 3 most-viewed tracks for each artist using window functions.
+1. Calculate the average danceability of tracks in each album.
 
 Query:
 ```sql
@@ -166,8 +166,9 @@ SELECT
 FROM spotify
 GROUP BY 1
 ORDER BY 2 DESC
+LIMIT 5;
 ```
-![image](https://github.com/user-attachments/assets/5ea0fd25-ebbd-4572-bc9e-2ff5daa24b2f)
+![image](https://github.com/user-attachments/assets/5b13e656-425e-4e58-8f33-ebb6a561b482)
 
 3. List all tracks along with their views and likes where `official_video = TRUE`.
 
